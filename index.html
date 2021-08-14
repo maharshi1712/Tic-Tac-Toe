@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="left">
+            <div class="title">
+                <h1 style="font-size:50px">
+                    LET's PLAY<br>TIC-TAC-TOE GAME!
+                </h1>
+            </div>
+            <div class="restart">
+                Start a New Game
+            </div>
+            <h5 style="margin-top:20px;" class="start_text">Start with Player X</h5>
+        </div>
+        <div class="right">
+            <div class="game">
+                <div class="header">
+                    <div class="player-x">
+                        <span>Player X</span>
+                    </div>
+                    <div class="player-o">
+                        <span>Player O</span>
+                    </div>
+                </div>
+                <div class="board">
+                    <div class="board-tile board-0" data-index="0">
+
+                    </div>
+                    <div class="board-tile board-1" data-index="1">
+
+                    </div>
+                    <div class="board-tile board-2" data-index="2">
+
+                    </div>
+                    <div class="board-tile board-3" data-index="3">
+
+                    </div>
+                    <div class="board-tile board-4" data-index="4">
+
+                    </div>
+                    <div class="board-tile board-5" data-index="5">
+
+                    </div>
+                    <div class="board-tile board-6" data-index="6">
+
+                    </div>
+                    <div class="board-tile board-7" data-index="7">
+
+                    </div>
+                    <div class="board-tile board-8" data-index="8">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="winnerModal">
+            <div class="modal-dialog modal-fullscreen text-center winner">
+            </div>
+            <div class="modal_button_div">
+                <button class="modal_restart">Restart</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

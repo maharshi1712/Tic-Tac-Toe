@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Merriweather Sans", sans-serif;
+    color: #283542;
+}
+
+.wrapper {
+    max-width: 1440px;
+    height: 800px;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: all 0.15s;
+}
+
+.restart {
+    width: 175px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid #4c6986;
+    transition: all 0.2s;
+    margin-top: 25px;
+}
+
+.restart:hover {
+    background-color: #4c6986;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    color: #9a9a9a;
+    font-size: 30px;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 3px solid rgba(192, 221, 250, 0.8);
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    transition: all 0.15s;
+}
+
+.game {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    transition: all 0.15s;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0px;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.board-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    transition: all 0.15s;
+    cursor: pointer;
+    color: #436588;
+}
+
+.board-tile:not(:nth-child(3n)) {
+    border-right: 3px solid rgba(137, 163, 189, 0.8);
+}
+
+.board-tile:not(:nth-last-child(-n+3)) {
+    border-bottom: 3px solid rgba(137, 163, 189, 0.8);
+}
+
+.board-tile:hover {
+    color: azure;
+    background-color: #283542;
+}
+
+.winnerModal {
+    display: none;
+    position: absolute;
+    transition: all 0.15s;
+}
+
+.winner {
+    font-size: 80px;
+    z-index: 3;
+    transition: all 0.15s;
+}
+
+.modal_restart {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 40px;
+    border: 1px solid #4c6986;
+    margin-top: 30px;
+    transition: all 0.15s;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_restart:hover {
+    background-color: #4c6986;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal_button_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 750px) {
+    .wrapper {
+        height: 100vh;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .game {
+        margin-top: 100px;
+        width: 400px;
+        height: 400px;
+        margin-left: 0px;
+    }
+    .title h1 {
+        text-align: center;
+    }
+    .restart {
+        position: absolute;
+        top: 31%;
+        left: 34%;
+    }
+    .start_text {
+        text-align: center;
+    }
+}
