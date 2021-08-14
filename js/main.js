@@ -3,7 +3,7 @@ class Game {
         this.board = new Array(9).fill(null);
         this.turn = "X";
         document.querySelector(".player-x").style.color = "#283542";
-        document.querySelector(".player-o").style.color = "#9a9a9a";
+        document.querySelector(".player-o").style.color = "#D1D5DB";
     }
 
     nextTurn() {
@@ -11,10 +11,10 @@ class Game {
         else this.turn = "X";
         if (this.turn == "X") {
             document.querySelector(".player-x").style.color = "#283542";
-            document.querySelector(".player-o").style.color = "#9a9a9a";
+            document.querySelector(".player-o").style.color = "#D1D5DB";
         } else {
             document.querySelector(".player-o").style.color = "#283542";
-            document.querySelector(".player-x").style.color = "#9a9a9a";
+            document.querySelector(".player-x").style.color = "#D1D5DB";
         }
     }
 
@@ -62,13 +62,17 @@ class Game {
                 return;
             }
         }
+        document.querySelector(".winnerModal").style.display = "block";
+        document.querySelector(".left").style.display = "none";
+        document.querySelector(".right").style.display = "none";
+        document.querySelector(".winner").innerHTML = `😞 No one has won this game 😞`;
     }
 
     popUpModal(a) {
         document.querySelector(".winnerModal").style.display = "block";
         document.querySelector(".left").style.display = "none";
         document.querySelector(".right").style.display = "none";
-        document.querySelector(".winner").innerHTML = `🎊 Player ${a} won this game 🎊`;
+        document.querySelector(".winner").innerHTML = `🎊 Player-${a} won this game 🎊`;
     }
 
     removePopUp() {
@@ -81,7 +85,7 @@ class Game {
         this.board = new Array(9).fill(null);
         this.turn = "X";
         document.querySelector(".player-x").style.color = "#283542";
-        document.querySelector(".player-o").style.color = "#9a9a9a";
+        document.querySelector(".player-o").style.color = "#D1D5DB";
 
     }
 }
