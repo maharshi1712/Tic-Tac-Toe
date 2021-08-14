@@ -43,11 +43,15 @@ class Game {
             const [a, b, c] = combination;
             if (this.board[a] == this.board[b] && this.board[b] == this.board[c] && this.board[c] == this.board[a] && this.board[a] == "X") {
                 makeWinnerGreen(a, b, c);
-                this.popUpModal(this.board[a]);
+                setTimeout(() => {
+                    this.popUpModal(this.board[a]);
+                }, 1500);
             }
             if (this.board[a] == this.board[b] && this.board[b] == this.board[c] && this.board[c] == this.board[a] && this.board[a] == "O") {
                 makeWinnerGreen(a, b, c);
-                this.popUpModal(this.board[a]);
+                setTimeout(() => {
+                    this.popUpModal(this.board[a]);
+                }, 1500);
             }
         }
     }
